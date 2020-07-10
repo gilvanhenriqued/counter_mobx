@@ -45,10 +45,20 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Text(
               'You have pushed the button this many times:',
+              style: TextStyle(
+                  fontSize: 18
+                ),
             ),
-            Observer(
-              builder: (BuildContext context) => Text(
-                "${counter.value}"
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0,10,0,0),
+              child: Observer(
+                builder: (BuildContext context) => Text(
+                  "${counter.value}",
+                  style: TextStyle(
+                    fontSize: 30,
+                    color: Colors.blue
+                  ),
+                ),
               ),
             ),
           ],
