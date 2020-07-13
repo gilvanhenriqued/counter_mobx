@@ -7,11 +7,11 @@ class Counter = CounterBase with _$Counter;
 
 abstract class CounterBase with Store {
   @observable 
-  int value = 0;
+  int numClick = 0;
 
   @action 
   increment() {
-    value++;
+    numClick++;
   }
 }
 

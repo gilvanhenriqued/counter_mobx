@@ -9,18 +9,18 @@ part of 'counter.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$Counter on CounterBase, Store {
-  final _$valueAtom = Atom(name: 'CounterBase.value');
+  final _$numClickAtom = Atom(name: 'CounterBase.numClick');
 
   @override
-  int get value {
-    _$valueAtom.reportRead();
-    return super.value;
+  int get numClick {
+    _$numClickAtom.reportRead();
+    return super.numClick;
   }
 
   @override
-  set value(int value) {
-    _$valueAtom.reportWrite(value, super.value, () {
-      super.value = value;
+  set numClick(int value) {
+    _$numClickAtom.reportWrite(value, super.numClick, () {
+      super.numClick = value;
     });
   }
 
@@ -40,7 +40,7 @@ mixin _$Counter on CounterBase, Store {
   @override
   String toString() {
     return '''
-value: ${value}
+numClick: ${numClick}
     ''';
   }
 }

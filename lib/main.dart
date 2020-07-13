@@ -1,3 +1,4 @@
+import 'package:counter_mobx/views/hello_view.dart';
 import 'package:counter_mobx/views/home_view.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,11 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       debugShowCheckedModeBanner: false,
-      home: HomeView(),
+      initialRoute: '/',
+      routes: {
+        '/': (_) => HomeView(),
+        '/hello_view': (_) => HelloView(),
+      }
     );
   }
 }
